@@ -19,6 +19,13 @@ export default {
 		},
 		extend: {
 			colors: {
+				// CryptoPay colors
+				'crypto-blue': '#0066FF',
+				'crypto-navy': '#2C3E50', 
+				'crypto-green': '#00C896',
+				'crypto-orange': '#FF4757',
+				'crypto-red': '#2C3E50',
+				'crypto-gray': '#F8F9FA',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +91,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'pulse': {
+					'0%': { transform: 'scale(1)', opacity: '1' },
+					'50%': { transform: 'scale(1.05)', opacity: '0.8' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'pulse-slow': 'pulse 2s ease-in-out infinite'
+			},
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
+				'roboto': ['Roboto', 'system-ui', 'sans-serif']
 			}
 		}
 	},
